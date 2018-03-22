@@ -17,7 +17,7 @@ router.get('/',function (req,res){
         if(err){
             console.log(err);
         }else{ 
-            com;
+            com;    
             res.render('index',{rows: rows});
             console.log(rows);
         }
