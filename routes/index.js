@@ -19,16 +19,25 @@ router.get('/',function (req,res){
         }else{ 
             com;    
             res.render('index',{rows: rows});
-            console.log(rows);
+            // console.log(rows);
         }
     });
 });
+
+router.get('/firebase', function(req, res){
+    res.render('firebase');
+})
+
+
 
 var com = conn.query('UPDATE guest SET com = com+1 where id=1',function(err, rows, fields){
     if(err){
         console.log(err);
     }else{
-        console.log(rows);
+        // console.log(rows);
+        conn.query('Select * from guest', function(err, rows, fields){
+            console.log("guest : " +rows[0].com);
+        })
     }
 });
 module.exports = router;

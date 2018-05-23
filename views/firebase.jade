@@ -56,63 +56,59 @@ html
               li.has-submenu
                 a(href='/firebase')
                   i.mdi.mdi-diamond
-                  | Comming
+                  | Firebase
     .wrapper
     .container
       // Page-Title
       .row
         .col-sm-12
 
-            h2.page-title Graphics PPT
-      .row
-        .col-sm-12
-          .card-box
-            h2.page-title 
-              strong 공지가 없습니다.
-      //- .row
-      //-   .col-sm-12
-      //-     .card-box
-      //-       h4.m-t-0.header-title
-      //-         b Homework- Version Update 계획(PPT)
-      //-       ul
-      //-           li Deadline: 4월 26일 23시 59분
-      //-           li FileName: [title of game][your student ID] [your name].pptx
-      //-           li Email: kiun91@hotmail.com
-      //-           li Email Subject : [Graphics] [your_student_ID] [your name]
-      //-       h4.m-t-0.header-title
-      //-         b 내용
-      //-       ul
-      //-           li Game Concept
-      //-           li Bug List
-      //-           li Manual(Screenshot)
-      //-           li UI
-      //-           li Joint/Effector
-      //-       p.text-muted.font-13
-              
+            h2.page-title Firebase
 
-
-      // end page title end breadcrumb
       .row
         .col-sm-12
           .card-box
             h4.m-t-0.header-title
-              b Download Table
+              b Firebase SDK 적용
+            ol
+                li 
+                  a(href= 'https://firebase.google.com/download/unity?authuser=0' class="btn btn-sm btn-primary") Firebase SDK Down
+                li Unity SDK ZIP 풀기 
+                li Unity Custom Project Import (FirebaseDatabase.unitypackage)
+                li Email Subject : [Graphics] [your_student_ID] [your name]
+            h4.m-t-0.header-title
+              b Firebase Project 생성
+            ol
+                li 
+                  a(href= 'https://console.firebase.google.com/' class="btn btn-sm btn-warning") Firebase Console Page
+                li Project 추가
+                li Manual(Screenshot)
+            h4.m-t-0.header-title
+              b Firebase Realtime Database 설정
+            ol
+                li 좌측 Database 선택
+                li Realtime Database 시작하기 
+                li 잠금 모드로 시작
+                li 규칙 설정 - false를 true 로 수정 
+                li 게시하기
+            h4.m-t-0.header-title
+              b Unity 설정
+            ul
+                li google-services.json
+                li p12
+            ol
+                li Android App 추가
+                li 
+                   a(href='https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=YOUR-FIREBASE-APP', class='btn btn-sm btn-primary') p12 파일 생성
+                   h5 PW: notasecret
+                li 잠금 모드로 시작
+                li 규칙 설정 - false를 true 로 수정 
+                li 게시하기
+                 
             p.text-muted.font-13
-              | Fileclick Download
-            table.table.table-hover.m-0
-              thead
-                tr
-                  th(scope='col') #
-                  th() Title
-                  th() Down
-              tbody
-                -each row in rows
-                    tr
-                      td(scope="row")=row.id
-                      td=row.title
-                      td 
-                        a(href='/files/'+row.path).btn.btn-danger Down      
-      // end row
+              
+
+
 
     // Footer
     footer.footer.text-right
