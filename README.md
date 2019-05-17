@@ -1,4 +1,4 @@
-# Down_Server
+# Graphics Down Server
 ### 18년도 1학기 Graphics 수업자료 제공 WebPage
 
 <br>
